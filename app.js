@@ -26,6 +26,6 @@ app.use((req, res) => {
 });
 
 // 启动服务器
-app.listen(port, () => {
-  console.log(`服务器运行在 http://localhost:${port}`);
+app.listen(3000, '127.0.0.1', () => {
+  console.log('Listening safely!');
 });
