@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= locals.title || (locals.lang === 'en' ? 'Page Not Found' : '页面未找到') %></title>
+  <title><%= locals.title || (locals.lang === 'en' ? 'Server Error' : '服务器错误') %></title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -24,12 +24,12 @@
 
   <main>
     <section class="error">
-      <h1>404</h1>
-      <h2><%= locals.lang === 'en' ? 'Page Not Found' : '页面未找到' %></h2>
+      <h1>500</h1>
+      <h2><%= locals.lang === 'en' ? 'Server Error' : '服务器错误' %></h2>
       <p>
         <%= locals.lang === 'en' ? 
-          'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.' : 
-          '您寻找的页面可能已被移除、更名或暂时不可用。' 
+          'Sorry, something went wrong on our server. Please try again later.' : 
+          '抱歉，服务器出现了问题。请稍后再试。' 
         %>
       </p>
       <a href="/" class="home-btn">

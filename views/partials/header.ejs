@@ -1,19 +1,101 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="<%= lang === 'en' ? 'en' : 'zh' %>">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #e6dfc8; /* 修改这里更改header背景色 */
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* 统一导航栏按钮，包括语言切换 */
+    nav ul li {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;  /* 垂直居中 */
+    }
+
+    /* 所有 a 链接，包括语言按钮 */
+    nav ul li a {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    }
+
+    /* 悬停效果 */
+    nav ul li a:hover {
+    color: #666;
+    }
+
+    /* active 样式 */
+    .active {
+    border-bottom: 2px solid #8b7d55;
+    }
+
+    /* 语言按钮特殊样式 */
+    .lang-switch a {
+    background-color: #e6dfc8; /* 与 header 相同 */
+    border: 1px solid #8b7d55;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #8b7d55;
+    display: flex;
+    align-items: center;
+    }
+
+    .lang-switch a:hover {
+    background-color: #e8e0cc;
+    }
+
+    .lang-switch a:before {
+    content: '🌐';
+    margin-right: 4px;
+    font-size: 0.9em;
+    }
+    
+    .active {
+      border-bottom: 2px solid #8b7d55;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1><%= title %></h1>
-        <nav>
-            <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="/about">关于</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+  <header>
+    <a href="/" class="logo">Ann Hua</a>
+    
+    <nav>
+      <ul>
+        <li><a href="/" class="<%= currentPath === '/' ? 'active' : '' %>"><%= lang === 'en' ? 'About' : '关于我' %></a></li>
+        <li><a href="/projects" class="<%= currentPath === '/projects' ? 'active' : '' %>"><%= lang === 'en' ? 'Projects' : '项目' %></a></li>
+        <li><a href="/contact" class="<%= currentPath === '/contact' ? 'active' : '' %>"><%= lang === 'en' ? 'Contact' : '联系' %></a></li>
+        <li class="lang-switch">
+          <a href="<%= currentPath %>?lang=<%= lang === 'en' ? 'zh' : 'en' %>">
+            <%= lang === 'en' ? '中文' : 'EN' %>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>

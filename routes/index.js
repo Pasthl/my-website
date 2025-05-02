@@ -1,25 +1,50 @@
 const express = require('express');
 const router = express.Router();
 
-// 首页路由
+// Middleware to handle language preference
+router.use((req, res, next) => {
+  // Default language is Chinese, but can be set to English via query parameter
+  res.locals.lang = req.query.lang === 'en' ? 'en' : 'zh';
+  
+  // Store current path for language toggle links
+  res.locals.currentPath = req.path;
+  
+  next();
+});
+
+// Home/About page route
 router.get('/', (req, res) => {
   res.render('pages/index', { 
-    title: '首页',
-    message: '欢迎来到我的网站！' 
+    title: res.locals.lang === 'en' ? 'About Me' : '关于我',
+    lang: res.locals.lang,
+    currentPath: res.locals.currentPath
   });
 });
 
-// 关于页面路由
-router.get('/about', (req, res) => {
-  res.render('pages/about', { 
-    title: '关于我们',
-    content: '这是一个使用Express和EJS构建的简单网站。' 
+// Projects page route
+router.get('/projects', (req, res) => {
+  res.render('pages/projects', { 
+    title: res.locals.lang === 'en' ? 'My Projects' : '我的项目',
+    lang: res.locals.lang,
+    currentPath: res.locals.currentPath
   });
 });
 
-// 测试API路由
+// Contact page route
+router.get('/contact', (req, res) => {
+  res.render('pages/contact', { 
+    title: res.locals.lang === 'en' ? 'Contact Me' : '联系我',
+    lang: res.locals.lang,
+    currentPath: res.locals.currentPath
+  });
+});
+
+// API route example
 router.get('/api/hello', (req, res) => {
-  res.json({ message: '你好，世界！' });
+  const response = {
+    message: res.locals.lang === 'en' ? 'Hello, World!' : '你好，世界！'
+  };
+  res.json(response);
 });
 
 module.exports = router;

@@ -1,0 +1,81 @@
+<%- include('../partials/header') %>
+
+<section class="projects">
+  <h1><%= lang === 'en' ? 'My Projects' : '我的项目' %></h1>
+      
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-info">
+        <h3 class="project-title">
+          <%= lang === 'en' ? 'Personal Website' : '个人网站' %>
+        </h3>
+        <p class="project-description">
+          <%= lang === 'en' ? 'A responsive personal website built with Node.js, Express, and EJS.' : '使用Node.js、Express和EJS构建的响应式个人网站。' %>
+        </p>
+        <div class="project-tech">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>EJS</span>
+          <span>CSS</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">
+          <%= lang === 'en' ? 'View Project' : '查看项目' %>
+        </a>
+        <a href="#" class="project-link">GitHub</a>
+      </div>
+    </div>
+     
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-info">
+        <h3 class="project-title">
+          <%= lang === 'en' ? 'Task Manager App' : '任务管理应用' %>
+        </h3>
+        <p class="project-description">
+          <%= lang === 'en' ? 'A web application for managing daily tasks and organizing work schedules.' : '用于管理日常任务和组织工作日程的Web应用程序。' %>
+        </p>
+        <div class="project-tech">
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>MongoDB</span>
+          <span>Express</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">
+          <%= lang === 'en' ? 'View Project' : '查看项目' %>
+        </a>
+        <a href="#" class="project-link">GitHub</a>
+      </div>
+    </div>
+     
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-info">
+        <h3 class="project-title">
+          <%= lang === 'en' ? 'E-commerce API' : '电子商务API' %>
+        </h3>
+        <p class="project-description">
+          <%= lang === 'en' ? 'A RESTful API for e-commerce applications with product management and user authentication.' : '用于电子商务应用的RESTful API，包含产品管理和用户认证功能。' %>
+        </p>
+        <div class="project-tech">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+          <span>JWT</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">
+          <%= lang === 'en' ? 'View Project' : '查看项目' %>
+        </a>
+        <a href="#" class="project-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
