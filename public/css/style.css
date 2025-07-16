@@ -4,6 +4,8 @@
     --accent-color: #8c6d46; /* Darker brown for accents */
     --light-accent: #d3c09e; /* Lighter beige for subtle elements */
     --highlight-color: #b88c50; /* Highlight color for hover states */
+    --icon-filter: invert(40%) sepia(20%) saturate(1000%) hue-rotate(15deg) brightness(0.7) contrast(1);
+    --icon-filter-hover: invert(50%) sepia(30%) saturate(1000%) hue-rotate(15deg) brightness(0.8) contrast(1);
   }
   
   body {

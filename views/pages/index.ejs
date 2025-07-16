@@ -1,26 +1,225 @@
-<%- include('../partials/header') %>
-
-<section class="about">
-  <div class="profile">
-    <h1><%= lang === 'en' ? 'Hello, I\'m' : '你好，我是' %> <span class="name">Ann Hua</span></h1>
-    <h2 class="subtitle"><%= lang === 'en' ? 'Student at ' : '就读于' %> University of Pennsylvania</h2>
+<!DOCTYPE html> 
+<html lang="<%= lang %>"> 
+<head>   
+  <meta charset="UTF-8">   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <title><%= lang === 'en' ? 'Ann Hua - Portfolio' : 'Ann Hua - Portfolio' %></title>   
+  <link rel="stylesheet" href="/css/style.css">   
+  <link rel="stylesheet" href="/css/home.css"> 
+</head> 
+<body>   
+  <%- include('../partials/header') %>      
+  
+  <main>     
+    <!-- About Section -->
+    <section id="about" class="section-container">       
+      <div class="hero-content">         
+        <div class="profile-info">           
+          <h2 class="subtitle"><%= lang === 'en' ? 'I\'m a student at ' : '目前就读于' %> <%= lang === 'en' ? 'University of Pennsylvania' : '宾夕法尼亚大学' %></h2>           
+          <h1 class="profile-title"><%= lang === 'en' ? 'Ann Hua' : '华婧羽' %></h1>           
+          <p class="profile-subtitle">(<%= lang === 'en' ? 'Focused on Embedded Systems & IoT | Machine Learning' : '聚焦于嵌入式系统&IoT | 机器学习' %>)</p>           
+          <p class="profile-description">             
+            <%= lang === 'en' ? 'I am a passionate developer focused on creating elegant solutions to complex problems.' : '一名热衷于为复杂问题创造优雅解决方案的开发者。' %>           
+          </p>           
+          <div class="social-links">             
+            <a href="https://open.spotify.com/playlist/1oEJEKB8vVpCpqCmSNPnK5" target="_blank" title="Spotify">🎧</a>                                      
+            <a href="https://www.linkedin.com/in/jingyu-hua" target="_blank" title="LinkedIn">in</a>             
+            <a href="mailto:huajingyu8@gmail.com" title="Email">@</a>
+            <a href="https://github.com/Pasthl" target="_blank" title="GitHub">
+              <img src="/image/github.svg" alt="GitHub" class="github-icon">
+            </a>           
+          </div>         
+        </div>                  
+        <div class="profile-image-container">           
+          <div class="profile-background"></div>           
+          <img src="/image/Ann.png" alt="Ann Hua" class="profile-image">         
+        </div>       
+      </div>
+    </section>
     
-    <div class="description">
-      <p><%= lang === 'en' ? 'I am a passionate developer focused on creating elegant solutions to complex problems.' : '我是一位热衷于为复杂问题创造优雅解决方案的开发者。' %></p>
-    </div>
+    <!-- Education Section -->
+    <section id="education" class="section-container">
+      <div class="section-content">
+        <h2 class="section-title"><%= lang === 'en' ? 'Education' : '教育背景' %></h2>
+        <div class="education-container">
+          <div class="education-item">
+            <h3><%= lang === 'en' ? 'University of Pennsylvania' : '宾夕法尼亚大学' %></h3>
+            <p class="education-details"><%= lang === 'en' ? 'Master of Science in Electrical Engineering' : '电子工程工学硕士' %></p>
+            <p class="education-date">2024.09 - 2026.06</p>
+            <p class="education-rank"><%= lang === 'en' ? 'Ivy League University (QS World Ranking No.15, 2026)' : '美国常春藤联盟 (2026年QS世界排名第15位)' %></p>
+            <ul class="education-description">
+              <li><%= lang === 'en' ? 'GPA: 3.95/4.00' : 'GPA: 3.95/4.00' %></li>
+              <li><%= lang === 'en' ? 'Core Courses: IoT Edge Computing, Smart Devices, Machine Learning, Computer Networks and Protocols, Control Systems Analysis' : '主修课程：IoT边缘计算、智能设备、机器学习、计算机网络与协议、控制系统分析' %></li>
+            </ul>
+          </div>
+          <div class="education-item">
+            <h3><%= lang === 'en' ? 'Shanghai University' : '上海大学' %></h3>
+            <p class="education-details"><%= lang === 'en' ? 'Bachelor of Science in Automation' : '自动化工学学士' %></p>
+            <p class="education-date">2020.09 - 2024.06</p>
+            <p class="education-rank"><%= lang === 'en' ? '211/Double First-Class University' : '211/双一流高校' %></p>
+            <ul class="education-description">
+              <li><%= lang === 'en' ? 'GPA: 86/100' : 'GPA: 86/100' %></li>
+              <li><%= lang === 'en' ? 'Core Courses: Data Structures and Algorithms, Operating Systems, Microcontroller Principles, Signal Analysis and Processing, Automatic Control Principles' : '主修课程：数据结构与算法，操作系统，微控制器原理，信号分析与处理，自动控制原理' %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section-container">       
+      <div class="section-content">
+        <h2 class="section-title"><%= lang === 'en' ? 'Technical Skills' : '专业技能' %></h2>
+        
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3 class="skill-category-title"><%= lang === 'en' ? 'Programming Languages' : '编程语言' %></h3>
+          <div class="tech-grid">         
+            <div class="tech-item">C/C++</div>         
+            <div class="tech-item">Python</div>         
+            <div class="tech-item">MATLAB</div>         
+            <div class="tech-item">JavaScript</div>         
+            <div class="tech-item">HTML/CSS</div>
+          </div>
+        </div>
+        
+        <!-- Embedded Systems & IoT -->
+        <div class="skill-category">
+          <h3 class="skill-category-title"><%= lang === 'en' ? 'Embedded Systems & IoT' : '嵌入式系统与物联网' %></h3>
+          <div class="tech-grid">         
+            <div class="tech-item">FreeRTOS</div>         
+            <div class="tech-item">UART/SPI/I2C</div>         
+            <div class="tech-item">CAN/TCP/UDP</div>         
+            <div class="tech-item">MQTT</div>         
+            <div class="tech-item">GPIO/Interrupts</div>
+            <div class="tech-item">PWM/ADC</div>
+            <div class="tech-item">PID Control</div>
+          </div>
+        </div>
+        
+        <!-- Hardware Design -->
+        <div class="skill-category">
+          <h3 class="skill-category-title"><%= lang === 'en' ? 'Hardware Design' : '硬件设计' %></h3>
+          <div class="tech-grid">         
+            <div class="tech-item">Circuit Design</div>         
+            <div class="tech-item">PCB Design</div>         
+            <div class="tech-item">4-Layer PCB</div>         
+            <div class="tech-item">Oscilloscope</div>         
+            <div class="tech-item">Logic Analyzer</div>
+            <div class="tech-item">Multimeter</div>
+          </div>
+        </div>
+        
+        <!-- Software & Tools -->
+        <div class="skill-category">
+          <h3 class="skill-category-title"><%= lang === 'en' ? 'Software & Tools' : '软件与工具' %></h3>
+          <div class="tech-grid">         
+            <div class="tech-item">Linux</div>         
+            <div class="tech-item">Git</div>         
+            <div class="tech-item">Node.js</div>         
+            <div class="tech-item">Express</div>         
+            <div class="tech-item">EJS</div>
+            <div class="tech-item">React</div>
+            <div class="tech-item">MongoDB</div>
+            <div class="tech-item">SQL</div>
+          </div>
+        </div>
+        
+        <!-- Language Skills -->
+        <div class="skill-category">
+          <h3 class="skill-category-title"><%= lang === 'en' ? 'Language Skills' : '语言能力' %></h3>
+          <div class="tech-grid">         
+            <div class="tech-item">English (TOEFL 102)</div>         
+            <div class="tech-item">GRE 322</div>         
+            <div class="tech-item">CET-4/6</div>         
+            <div class="tech-item">Chinese (Native)</div>
+          </div>
+        </div>
+      </div>
+    </section>   
+  </main>      
+  
+  <%- include('../partials/footer') %> 
+  
+  <!-- Navigation Arrow -->
+  <div id="nav-arrow" class="section-arrow" style="display: none;">
+    <span id="arrow-text">↓</span>
   </div>
-
-  <div class="tech-stack">
-    <h3><%= lang === 'en' ? 'Tech Stack' : '技术栈' %></h3>
-    <div class="tech-grid">
-      <div class="tech-item">JavaScript</div>
-      <div class="tech-item">Node.js</div>
-      <div class="tech-item">Express</div>
-      <div class="tech-item">EJS</div>
-      <div class="tech-item">HTML/CSS</div>
-      <!-- Add more tech items as needed -->
-    </div>
-  </div>
-</section>
-
-<%- include('../partials/footer') %>
+  
+  <script>
+    // Smart navigation arrow system
+    document.addEventListener('DOMContentLoaded', function() {
+      const navArrow = document.getElementById('nav-arrow');
+      const arrowText = document.getElementById('arrow-text');
+      const sections = ['#about', '#education', '#tech-stack'];
+      let currentSectionIndex = 0;
+      
+      // Show arrow initially
+      navArrow.style.display = 'flex';
+      
+      // Update arrow based on scroll position
+      function updateArrow() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Determine current section based on scroll position
+        let newIndex = 0;
+        for (let i = 0; i < sections.length; i++) {
+          const section = document.querySelector(sections[i]);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollTop >= sectionTop - windowHeight / 2 && scrollTop < sectionBottom - windowHeight / 2) {
+              newIndex = i;
+              break;
+            }
+          }
+        }
+        
+        // Update arrow text and target
+        if (newIndex < sections.length - 1) {
+          arrowText.textContent = '↓';
+          navArrow.setAttribute('href', sections[newIndex + 1]);
+          navArrow.setAttribute('aria-label', newIndex === 0 ? 
+            '<%= lang === "en" ? "Scroll to Education" : "滚动到教育背景" %>' : 
+            '<%= lang === "en" ? "Scroll to Tech Stack" : "滚动到技术栈" %>');
+        } else {
+          arrowText.textContent = '↑';
+          navArrow.setAttribute('href', '#top');
+          navArrow.setAttribute('aria-label', '<%= lang === "en" ? "Back to top" : "返回顶部" %>');
+        }
+        
+        currentSectionIndex = newIndex;
+      }
+      
+      // Handle arrow click
+      navArrow.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === '#top') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        } else {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+      
+      // Update arrow on scroll
+      window.addEventListener('scroll', updateArrow);
+      
+      // Initial update
+      updateArrow();
+    });
+  </script>
+</body> 
+</html>

@@ -30,6 +30,15 @@ router.get('/projects', (req, res) => {
   });
 });
 
+// Smart World Clock project detail page route
+router.get('/projects/smart-clock', (req, res) => {
+  res.render('pages/smart-clock', { 
+    title: res.locals.lang === 'en' ? 'Smart World Clock - Project Details' : '智能世界时钟 - 项目详情',
+    lang: res.locals.lang,
+    currentPath: res.locals.currentPath
+  });
+});
+
 // Contact page route
 router.get('/contact', (req, res) => {
   res.render('pages/contact', { 

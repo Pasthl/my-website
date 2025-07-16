@@ -1,0 +1,461 @@
+/* Updated Home page styles with sections and navigation arrows */
+
+/* Section container styling */
+.section-container {
+    position: relative;
+    min-height: 60vh; /* Each section takes at least full viewport height */
+    padding: 20px 20px 60px; /* Reduced top padding, kept bottom padding for arrow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Common section content styling */
+  .section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Section title styling */
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* Section navigation arrow */
+  .section-arrow {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .section-arrow:hover {
+    transform: translateY(-5px);
+    background-color: var(--highlight-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* About section (previously hero) */
+  #about {
+    padding-top: 30px; /* Reduced from 80px to 30px */
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .profile-info {
+    max-width: 400px;
+  }
+  
+  .profile-title {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--accent-color);
+  }
+  
+  .profile-subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: var(--accent-color);
+    font-weight: 400;
+  }
+  
+  .profile-description {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+  }
+  
+  .subtitle {
+    font-weight: 400;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Social links */
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a:hover {
+    color: var(--highlight-color);
+  }
+  
+  .github-icon {
+    width: 1.2rem;
+    height: 1.05rem;
+    vertical-align: middle;
+    filter: var(--icon-filter);
+  }
+  
+  .social-links a:hover .github-icon {
+    filter: var(--icon-filter-hover);
+  }
+  
+  /* Profile image styling */
+  .profile-image-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .profile-background {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top: 35px;
+    left: 35px;
+  }
+  
+  .profile-image {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid var(--background-color);
+    z-index: 1;
+  }
+  
+  /* Education section styling */
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .education-item {
+    background-color: var(--light-accent);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .education-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .education-item h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .education-details {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .education-date {
+    color: var(--accent-color);
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  .education-rank {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .education-description {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .education-description li {
+    margin-bottom: 8px;
+  }
+  
+  /* Tech Stack section styling */
+  #tech-stack .section-content {
+    text-align: center;
+  }
+  
+  .skill-category {
+    margin-bottom: 40px;
+  }
+  
+  .skill-category-title {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .tech-item {
+    background-color: var(--light-accent);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .tech-item:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 900px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 30px;
+    }
+    
+    .profile-title {
+      font-size: 3rem;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    .profile-image-container {
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+    }
+    
+    .profile-background {
+      width: 220px;
+      height: 220px;
+      top: 30px;
+      left: 30px;
+    }
+    
+    .profile-image {
+      width: 240px;
+      height: 240px;
+    }
+    
+    .section-arrow {
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      gap: 20px;
+    }
+    
+    .profile-title {
+      font-size: 2.5rem;
+    }
+    
+    .profile-image-container {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .profile-background {
+      width: 200px;
+      height: 200px;
+      top: 25px;
+      left: 25px;
+    }
+    
+    .profile-image {
+      width: 220px;
+      height: 220px;
+    }
+    
+    .section-arrow {
+      bottom: 15px;
+      right: 15px;
+      width: 45px;
+      height: 45px;
+      font-size: 1.3rem;
+      z-index: 1001;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .skill-category-title {
+      font-size: 1.1rem;
+    }
+    
+    .tech-item {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      gap: 15px;
+    }
+    
+    .profile-title {
+      font-size: 2.2rem;
+    }
+    
+    .profile-image-container {
+      width: 220px;
+      height: 220px;
+    }
+    
+    .profile-background {
+      width: 180px;
+      height: 180px;
+      top: 20px;
+      left: 20px;
+    }
+    
+    .profile-image {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .section-arrow {
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 1.4rem;
+    }
+    
+    .section-title {
+      font-size: 1.6rem;
+    }
+    
+    .tech-grid {
+      gap: 10px;
+    }
+    
+    .tech-item {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+  }
+  /* Additional CSS fixes to ensure content is visible without excessive top space */
+
+/* Adjust vertical spacing for better initial view */
+body {
+    scroll-padding-top: 20px; /* Helps with scroll-to-anchor behavior */
+  }
+  
+  /* 确保箭头在所有设备上都可见 */
+  #nav-arrow {
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+  
+  /* 移动端安全区域支持 */
+  @supports (padding: max(0px)) {
+    .section-arrow {
+      bottom: max(40px, env(safe-area-inset-bottom));
+      right: max(40px, env(safe-area-inset-right));
+    }
+  }
+  
+  /* Main container adjustments */
+  main {
+    padding-top: 0; /* Remove any extra top padding from main */
+  }
+  
+  /* Header adjustments if needed */
+  header {
+    margin-bottom: 0; /* Remove any margin that pushes content down */
+  }
+  
+  /* First section specific adjustments */
+  #about {
+    padding-top: 20px; /* Further reduce top padding */
+    margin-top: 0; /* Remove any margin */
+  }
+  
+  /* Make sure hero content is immediately visible */
+  .hero-content {
+    margin-top: 10px; /* Very small top margin */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-height: 700px) {
+    /* For shorter screens, reduce even more */
+    #about {
+      padding-top: 10px;
+    }
+    
+    .section-container {
+      padding-top: 10px;
+    }
+    
+    .profile-title {
+      font-size: 3.5rem; /* Slightly smaller title on short screens */
+    }
+    
+    .profile-image-container {
+      transform: scale(0.9); /* Slightly smaller profile picture on short screens */
+    }
+  }
+  
+  /* Fix for subsequent sections */
+  #education, #tech-stack {
+    padding-top: 30px; /* Less top padding for other sections too */
+  }
+  
+  /* Ensure footer doesn't add unnecessary space */
+  footer {
+    margin-top: 0;
+    padding-top: 20px;
+  }

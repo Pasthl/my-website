@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Smart World Clock - Project Details' : '智能世界时钟 - 项目详情' %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/project-detail.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="project-detail">
+    <!-- Project Header -->
+    <section class="project-header">
+      <div class="container">
+        <h1 class="project-title">
+          <%= lang === 'en' ? 'Smart World Clock' : '多功能世界时钟' %>
+        </h1>
+        <p class="project-subtitle">
+          <%= lang === 'en' ? 'Internet-connected smart desktop clock with world time, weather updates, custom alarms, Todo List, Pomodoro Timer, and ambient light sensing' : '联网智能桌面时钟，具备世界时间显示、天气更新、自定义闹钟、待办事项、番茄钟、倒计时和环境光感应功能' %>
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label"><%= lang === 'en' ? 'Duration:' : '项目时长:' %></span>
+            <span class="meta-value"><%= lang === 'en' ? '1 Semester' : '2025.01-2025.05' %></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label"><%= lang === 'en' ? 'Course:' : '课程:' %></span>
+            <span class="meta-value">ESE 5160 - IoT Edge Computing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Demo Video -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Demo Video' : '项目演示视频' %></h2>
+        <div class="video-container">
+          <!-- Desktop Video Player -->
+          <div class="desktop-video">
+            <iframe 
+              src="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/preview" 
+              width="100%" 
+              height="500" 
+              allow="autoplay"
+              class="demo-video">
+            </iframe>
+          </div>
+          
+          <!-- Mobile Video Player -->
+          <div class="mobile-video">
+            <div class="mobile-video-placeholder">
+              <div class="video-icon">🎥</div>
+              <h3><%= lang === 'en' ? 'Project Demo Video' : '项目演示视频' %></h3>
+              <p><%= lang === 'en' ? 'Click to watch the complete project demonstration' : '点击观看完整项目演示' %></p>
+              <a href="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/view?usp=sharing" 
+                 target="_blank" 
+                 class="mobile-video-button">
+                <%= lang === 'en' ? 'Watch Video' : '观看视频' %>
+              </a>
+            </div>
+          </div>
+          
+          <p class="video-description">
+            <%= lang === 'en' ? 'Complete functionality demonstration of the Smart World Clock project.' : '智能世界时钟项目的完整功能演示。' %>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Overview' : '项目概述' %></h2>
+        <div class="overview-content">
+          <div class="overview-text">
+            <p>
+              <%= lang === 'en' ? 'This project is an Internet-connected smart desktop clock that displays world time, weather updates, countdowns, and personalized alarms and to-do lists on an LCD screen. It also features an ambient light sensor to automatically turn on a light when the environment is dark.' : '这是一个联网智能桌面时钟，在LCD屏幕上显示世界时间、天气更新、倒计时以及个性化闹钟和待办事项列表。它还配备了环境光传感器，当环境变暗时自动开启照明。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'We were inspired by the fact that as lazy people, we struggle to achieve self-discipline in our lives, and designed this alarm clock to help people turn off their alarms with some movement and leave their phones to study and work at regular intervals.' : '我们的灵感来源于作为懒人，我们在生活中难以实现自律，因此设计了这个闹钟来帮助人们通过一些运动来关闭闹钟，并定期离开手机去学习和工作。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'The device connects to the Internet via Wi-Fi and communicates with a Node-RED dashboard to receive real-time weather data, synchronize time zones, and fetch task lists—enhancing its utility far beyond a conventional alarm clock.' : '设备通过Wi-Fi连接到互联网，并与Node-RED仪表板通信，接收实时天气数据、同步时区并获取任务列表，使其功能远超传统闹钟。' %>
+            </p>
+          </div>
+          <div class="overview-image">
+            <img src="/image/smart-clock-main.jpg" alt="Smart World Clock" class="project-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Key Features' : '主要功能' %></h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3><%= lang === 'en' ? 'World Time Display' : '世界时间显示' %></h3>
+            <p><%= lang === 'en' ? 'Display current time for multiple time zones with automatic synchronization' : '显示多个时区的当前时间，支持自动同步' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌤️</div>
+            <h3><%= lang === 'en' ? 'Real-time Weather' : '实时天气' %></h3>
+            <p><%= lang === 'en' ? 'Show current weather conditions and forecasts for selected cities' : '显示选定城市的当前天气状况和预报' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⏰</div>
+            <h3><%= lang === 'en' ? 'Smart Alarms' : '智能闹钟' %></h3>
+            <p><%= lang === 'en' ? 'Set multiple alarms with shake-to-dismiss functionality via IMU sensor' : '设置多个闹钟，通过IMU传感器实现摇动关闭功能' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3><%= lang === 'en' ? 'Todo Lists' : '待办事项' %></h3>
+            <p><%= lang === 'en' ? 'Manage daily tasks and to-do items through web dashboard' : '通过Web仪表板管理日常任务和待办事项' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3><%= lang === 'en' ? 'Ambient Lighting' : '环境照明' %></h3>
+            <p><%= lang === 'en' ? 'Automatic LED activation based on ambient light sensor readings' : '基于环境光传感器读数自动激活LED照明' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3><%= lang === 'en' ? 'Countdown Timer' : '倒计时器' %></h3>
+            <p><%= lang === 'en' ? 'Set countdown timers with alarm sound at completion' : '设置倒计时器，完成时发出闹钟声' %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Technical Specifications' : '技术规格' %></h2>
+        <div class="specs-container">
+          <div class="specs-column">
+            <h3><%= lang === 'en' ? 'Hardware Components' : '硬件组件' %></h3>
+            <ul class="specs-list">
+              <li><strong><%= lang === 'en' ? 'Microcontroller:' : '微控制器:' %></strong> SAMW25 (Wi-Fi enabled)</li>
+              <li><strong><%= lang === 'en' ? 'Display:' : '显示器:' %></strong> 7-inch TFT LCD with RA8875 driver</li>
+              <li><strong><%= lang === 'en' ? 'Sensors:' : '传感器:' %></strong> ADXL345 IMU, PDV-P8103 light sensor, DS3231 RTC</li>
+              <li><strong><%= lang === 'en' ? 'Actuators:' : '执行器:' %></strong> SMT-0540-S-R buzzer, LED for ambient lighting</li>
+              <li><strong><%= lang === 'en' ? 'Input:' : '输入:' %></strong> 2x B3F-1070 tactile buttons</li>
+              <li><strong><%= lang === 'en' ? 'Power:' : '电源:' %></strong> 3.7V Li-Ion battery with voltage regulation</li>
+            </ul>
+          </div>
+          <div class="specs-column">
+            <h3><%= lang === 'en' ? 'Software Stack' : '软件栈' %></h3>
+            <ul class="specs-list">
+              <li><strong><%= lang === 'en' ? 'RTOS:' : '实时操作系统:' %></strong> FreeRTOS</li>
+              <li><strong><%= lang === 'en' ? 'Communication:' : '通信:' %></strong> WiFi, I2C, SPI</li>
+              <li><strong><%= lang === 'en' ? 'Dashboard:' : '仪表板:' %></strong> Node-RED</li>
+              <li><strong><%= lang === 'en' ? 'APIs:' : '接口:' %></strong> Weather API, Time zone API</li>
+              <li><strong><%= lang === 'en' ? 'Language:' : '编程语言:' %></strong> Embedded C</li>
+              <li><strong><%= lang === 'en' ? 'Design Tools:' : '设计工具:' %></strong> Altium Designer, SolidWorks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'System Architecture' : '系统架构' %></h2>
+        <div class="architecture-content">
+          <div class="architecture-image">
+            <img src="/image/system-block-diagram.png" alt="System Block Diagram" class="project-image">
+          </div>
+          <div class="architecture-description">
+            <p>
+              <%= lang === 'en' ? 'The system uses a multi-task architecture based on FreeRTOS, with separate tasks for WiFi communication, LCD display, sensor reading, and user interface management. The SAMW25 microcontroller coordinates all components through I2C and SPI buses, while maintaining real-time responsiveness for user interactions.' : '系统采用基于FreeRTOS的多任务架构，包括WiFi通信、LCD显示、传感器读取和用户界面管理等独立任务。SAMW25微控制器通过I2C和SPI总线协调所有组件，同时保持用户交互的实时响应性。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'The Node-RED dashboard provides a web interface for remote configuration and monitoring, enabling users to set alarms, manage todo lists, and configure weather display preferences from any device with internet access.' : 'Node-RED仪表板提供Web界面进行远程配置和监控，使用户能够从任何联网设备设置闹钟、管理待办事项列表和配置天气显示偏好。' %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Challenges & Solutions' : '挑战与解决方案' %></h2>
+        <div class="challenges-grid">
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Hardware Integration' : '硬件集成' %></h3>
+            <p><%= lang === 'en' ? 'Limited board space and component compatibility issues required careful PCB design and component selection.' : '有限的板载空间和组件兼容性问题需要仔细的PCB设计和组件选择。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Redesigned PCB layout and selected compatible components, added debugging connectors for easier troubleshooting.' : '重新设计PCB布局并选择兼容组件，添加调试连接器以便于故障排除。' %>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'LCD Driver Development' : 'LCD驱动开发' %></h3>
+            <p><%= lang === 'en' ? 'The RA8875 LCD driver was completely new to us and required extensive datasheet study and custom driver implementation.' : 'RA8875 LCD驱动器对我们来说是完全陌生的，需要深入研究数据手册和自定义驱动实现。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Developed custom driver code with proper SPI configuration and mutex protection to prevent conflicts with WiFi task.' : '开发了自定义驱动代码，具有适当的SPI配置和互斥锁保护，防止与WiFi任务冲突。' %>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Real-time Performance' : '实时性能' %></h3>
+            <p><%= lang === 'en' ? 'Ensuring responsive user interface while maintaining WiFi connectivity and sensor readings required careful task prioritization.' : '在保持WiFi连接和传感器读取的同时确保响应式用户界面需要仔细的任务优先级设置。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Implemented proper FreeRTOS task scheduling with appropriate priorities and used mutexes for shared resource protection.' : '实现了适当的FreeRTOS任务调度，具有合适的优先级，并使用互斥锁保护共享资源。' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="project-section">
+      <div class="container">
+        <div class="back-link">
+          <a href="/projects" class="back-button">
+            ← <%= lang === 'en' ? 'Back to Projects' : '返回项目列表' %>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html> 
