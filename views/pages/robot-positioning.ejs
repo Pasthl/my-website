@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Robot Positioning System - Project Details' : '机器人定位系统 - 项目详情' %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/project-detail.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="project-detail">
+    <!-- Project Header -->
+    <section class="project-header">
+      <div class="container">
+        <h1 class="project-title">
+          <%= lang === 'en' ? 'LiDAR-based Robot Pose Estimation for Warehouse Environment' : '基于激光雷达的仓储环境机器人位姿估计方法' %>
+        </h1>
+        <p class="project-subtitle">
+          <%= lang === 'en' ? 'Design and implementation of a pose estimation method combining LiDAR and image processing technology for precise positioning of mobile robots in warehouse container environments' : '设计并实现了一种结合激光雷达和图像处理技术的位姿估计方法，用于仓储集装箱环境下的移动机器人精确定位' %>
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label"><%= lang === 'en' ? 'Duration:' : '项目时长:' %></span>
+            <span class="meta-value">2024.01 - 2024.05</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label"><%= lang === 'en' ? 'Technologies:' : '技术栈:' %></span>
+            <span class="meta-value">C++, HALCON, Eigen, UART</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Project Overview -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Overview' : '项目简介' %></h2>
+        <div class="overview-content">
+          <div class="overview-text">
+            <p>
+              <%= lang === 'en' ? 'This project designs and implements a pose estimation method that combines LiDAR and image processing technology for precise positioning of mobile robots in warehouse container environments. The method can quickly and accurately calculate the position and orientation of robots in container environments.' : '设计并实现了一种结合激光雷达和图像处理技术的位姿估计方法，用于仓储集装箱环境下的移动机器人精确定位。该方法能够快速、准确地计算机器人在集装箱环境下的位置和朝向。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'The system innovatively converts point cloud data into image processing problems, designs feature extraction methods for structured environments, and achieves millimeter-level indoor positioning with excellent stability and real-time performance.' : '创新性地将点云数据转换为图像处理问题，设计了针对结构化环境的特征提取方法，实现了毫米级精度的室内定位，具备良好的稳定性和实时性。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'Key achievements include achieving high-precision pose estimation with position error less than 1.5mm and angle error less than 1°, with excellent real-time performance of approximately 20ms per calculation.' : '主要成果包括实现高精度位姿估计（位置误差<1.5mm，角度误差<1°），实时性能优异（单次计算约20ms）。' %>
+            </p>
+          </div>
+          <div class="overview-image">
+            <img src="/image/robot-positioning-main.jpg" alt="Robot Positioning System" class="project-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Core Functions' : '核心功能' %></h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3><%= lang === 'en' ? 'Real-time LiDAR Data Acquisition' : '激光雷达数据实时获取与预处理' %></h3>
+            <p><%= lang === 'en' ? 'Real-time acquisition and preprocessing of LiDAR scanning data' : '激光雷达扫描数据的实时获取与预处理' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🖼️</div>
+            <h3><%= lang === 'en' ? 'Image-based Line Feature Extraction' : '基于图像处理的直线特征提取算法' %></h3>
+            <p><%= lang === 'en' ? 'Line feature extraction algorithm based on image processing' : '基于图像处理的直线特征提取算法' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3><%= lang === 'en' ? 'High-precision Pose Estimation' : '高精度位姿估计' %></h3>
+            <p><%= lang === 'en' ? 'High-precision pose estimation (position error <1.5mm, angle error <1°)' : '高精度位姿估计（位置误差<1.5mm，角度误差<1°）' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3><%= lang === 'en' ? 'Excellent Real-time Performance' : '实时性能优异' %></h3>
+            <p><%= lang === 'en' ? 'Excellent real-time performance (approximately 20ms per calculation)' : '实时性能优异（单次计算约20ms）' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏗️</div>
+            <h3><%= lang === 'en' ? 'Structured Environment Optimization' : '结构化环境优化' %></h3>
+            <p><%= lang === 'en' ? 'Designed specifically for structured warehouse environments' : '专门针对结构化仓储环境设计' %></p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3><%= lang === 'en' ? 'Robust Stability' : '良好的稳定性' %></h3>
+            <p><%= lang === 'en' ? 'Excellent stability and reliability in warehouse operations' : '在仓储作业中具备良好的稳定性和可靠性' %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Technical Specifications' : '技术规格' %></h2>
+        <div class="specs-container">
+          <div class="specs-column">
+            <h3><%= lang === 'en' ? 'Hardware Components' : '硬件组件' %></h3>
+            <ul class="specs-list">
+              <li><strong><%= lang === 'en' ? 'LiDAR Sensor:' : '激光雷达传感器:' %></strong> <%= lang === 'en' ? 'RPLIDAR A2M8 Single-line LiDAR' : 'RPLIDAR A2M8 单线激光雷达' %></li>
+              <li><strong><%= lang === 'en' ? 'Processing Unit:' : '处理单元:' %></strong> High-performance CPU</li>
+              <li><strong><%= lang === 'en' ? 'Memory:' : '内存:' %></strong> 8GB+ RAM for point cloud processing</li>
+              <li><strong><%= lang === 'en' ? 'Storage:' : '存储:' %></strong> SSD for fast data access</li>
+              <li><strong><%= lang === 'en' ? 'Interface:' : '接口:' %></strong> <%= lang === 'en' ? 'UART Serial Communication' : 'UART串口通信' %></li>
+              <li><strong><%= lang === 'en' ? 'Display:' : '显示器:' %></strong> High-resolution monitor for visualization</li>
+            </ul>
+          </div>
+          <div class="specs-column">
+            <h3><%= lang === 'en' ? 'Software Stack' : '软件栈' %></h3>
+            <ul class="specs-list">
+              <li><strong><%= lang === 'en' ? 'Development Environment:' : '开发环境:' %></strong> Visual Studio, C++</li>
+              <li><strong><%= lang === 'en' ? 'Image Processing:' : '图像处理:' %></strong> <%= lang === 'en' ? 'Halcon Machine Vision Library' : 'Halcon机器视觉库' %></li>
+              <li><strong><%= lang === 'en' ? 'Mathematical Computing:' : '数学计算:' %></strong> <%= lang === 'en' ? 'Eigen Matrix Operations Library' : 'Eigen矩阵运算库' %></li>
+              <li><strong><%= lang === 'en' ? 'Communication Protocol:' : '通信协议:' %></strong> <%= lang === 'en' ? 'UART Serial Communication' : 'UART串口通信' %></li>
+              <li><strong><%= lang === 'en' ? 'Algorithms:' : '算法:' %></strong> <%= lang === 'en' ? 'Triangulation, Image Processing, Feature Extraction' : '三角测距、图像处理、特征提取' %></li>
+              <li><strong><%= lang === 'en' ? 'Performance:' : '性能指标:' %></strong> <%= lang === 'en' ? 'Position error <1.5mm, Angle error <1°' : '位置误差<1.5mm，角度误差<1°' %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Highlights -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Technical Highlights' : '技术亮点' %></h2>
+        <div class="challenges-grid">
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Innovative Point Cloud to Image Conversion' : '创新性地将点云数据转换为图像处理问题' %></h3>
+            <p><%= lang === 'en' ? 'Innovatively converts point cloud data into image processing problems, leveraging the power of computer vision algorithms for feature extraction and analysis.' : '创新性地将点云数据转换为图像处理问题，利用计算机视觉算法的强大功能进行特征提取和分析。' %></p>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Structured Environment Feature Extraction' : '设计了针对结构化环境的特征提取方法' %></h3>
+            <p><%= lang === 'en' ? 'Designed feature extraction methods specifically for structured environments, optimizing algorithms for warehouse container scenarios.' : '设计了针对结构化环境的特征提取方法，针对仓储集装箱场景优化算法。' %></p>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Millimeter-level Indoor Positioning' : '实现了毫米级精度的室内定位' %></h3>
+            <p><%= lang === 'en' ? 'Achieved millimeter-level indoor positioning accuracy with position error less than 1.5mm and angle error less than 1°.' : '实现了毫米级精度的室内定位，位置误差小于1.5mm，角度误差小于1°。' %></p>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Excellent Stability and Real-time Performance' : '具备良好的稳定性和实时性' %></h3>
+            <p><%= lang === 'en' ? 'Demonstrated excellent stability and real-time performance with approximately 20ms calculation time per cycle.' : '具备良好的稳定性和实时性，单次计算时间约20ms。' %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'System Architecture' : '系统架构' %></h2>
+        <div class="architecture-content">
+          <div class="architecture-image">
+            <img src="/image/robot-architecture.jpg" alt="Robot Positioning System Architecture" class="project-image">
+          </div>
+          <div class="architecture-description">
+            <p>
+              <%= lang === 'en' ? 'The system architecture consists of three main modules: data acquisition, processing, and visualization. The LiDAR sensor continuously scans the environment, generating point cloud data that is processed through multiple stages including filtering, registration, and pose estimation.' : '系统架构由三个主要模块组成：数据采集、处理和可视化。激光雷达传感器持续扫描环境，生成点云数据，通过过滤、配准和位姿估算等多个阶段进行处理。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'The processing pipeline includes point cloud preprocessing for noise reduction, coarse registration for initial alignment, and fine registration using ICP algorithm for high-precision positioning. The Qt-based interface provides real-time visualization of the environment map and robot pose.' : '处理流程包括用于降噪的点云预处理、用于初始对齐的粗配准，以及使用ICP算法进行高精度定位的精细配准。基于Qt的界面提供环境地图和机器人位姿的实时可视化。' %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Showcase' : '项目展示' %></h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="/image/lidar-processing-interface.jpg" alt="LiDAR Processing Interface" class="gallery-image">
+            <h3><%= lang === 'en' ? 'LiDAR Scanning Data Real-time Processing Interface' : '激光雷达扫描数据实时处理界面' %></h3>
+            <p><%= lang === 'en' ? 'Real-time processing interface for LiDAR scanning data, showing live data acquisition and preprocessing capabilities.' : '激光雷达扫描数据的实时处理界面，展示实时数据获取和预处理能力。' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/line-feature-extraction.jpg" alt="Line Feature Extraction Results" class="gallery-image">
+            <h3><%= lang === 'en' ? 'Image-based Line Feature Extraction Results' : '基于图像处理的直线特征提取结果' %></h3>
+            <p><%= lang === 'en' ? 'Results of line feature extraction based on image processing, demonstrating the conversion from point cloud to image analysis.' : '基于图像处理的直线特征提取结果，展示从点云到图像分析的转换过程。' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/warehouse-test-scene.jpg" alt="Warehouse Test Scene" class="gallery-image">
+            <h3><%= lang === 'en' ? 'Actual Test Scene in Simulated Warehouse Environment' : '模拟仓储环境下的实际测试场景' %></h3>
+            <p><%= lang === 'en' ? 'Actual testing scenario in simulated warehouse environment, showing the system performance in real-world conditions.' : '模拟仓储环境下的实际测试场景，展示系统在真实环境中的性能表现。' %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Details -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Implementation Details' : '实现细节' %></h2>
+        <div class="challenges-grid">
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Point Cloud to Image Conversion' : '点云到图像转换' %></h3>
+            <p><%= lang === 'en' ? 'Innovatively converting point cloud data into image processing problems, leveraging the power of computer vision algorithms for feature extraction and analysis.' : '创新性地将点云数据转换为图像处理问题，利用计算机视觉算法的强大功能进行特征提取和分析。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Developed custom algorithms to convert LiDAR point cloud data into 2D image representations for processing with HALCON machine vision library.' : '开发了自定义算法，将激光雷达点云数据转换为2D图像表示，以便使用HALCON机器视觉库进行处理。' %>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'Structured Environment Feature Extraction' : '结构化环境特征提取' %></h3>
+            <p><%= lang === 'en' ? 'Designing feature extraction methods specifically for structured warehouse environments with straight lines and regular geometries.' : '为具有直线和规则几何形状的结构化仓储环境设计专门的特征提取方法。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Implemented line detection algorithms optimized for warehouse container environments, achieving high-precision feature extraction.' : '实现了针对仓储集装箱环境优化的直线检测算法，实现高精度特征提取。' %>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3><%= lang === 'en' ? 'High-precision Pose Estimation' : '高精度位姿估计' %></h3>
+            <p><%= lang === 'en' ? 'Achieving millimeter-level positioning accuracy with position error less than 1.5mm and angle error less than 1° in warehouse environments.' : '在仓储环境中实现毫米级定位精度，位置误差小于1.5mm，角度误差小于1°。' %></p>
+            <div class="solution">
+              <strong><%= lang === 'en' ? 'Solution:' : '解决方案:' %></strong>
+              <%= lang === 'en' ? 'Combined triangulation, image processing, and feature extraction algorithms with Eigen matrix computation library for precise pose estimation.' : '结合三角测距、图像处理和特征提取算法，使用Eigen矩阵运算库进行精确位姿估计。' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Results -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Results' : '项目成果' %></h2>
+        <div class="overview-content">
+          <div class="overview-text">
+            <p>
+              <%= lang === 'en' ? 'The LiDAR-based robot pose estimation system successfully achieved high-precision positioning in warehouse container environments. The system demonstrated excellent performance with position error less than 1.5mm and angle error less than 1°, meeting the requirements for precise warehouse automation.' : '基于激光雷达的机器人位姿估计系统在仓储集装箱环境中成功实现了高精度定位。系统表现出优异的性能，位置误差小于1.5mm，角度误差小于1°，满足精确仓储自动化的要求。' %>
+            </p>
+            <p>
+              <%= lang === 'en' ? 'Key achievements include innovatively converting point cloud data into image processing problems, designing feature extraction methods for structured environments, and achieving millimeter-level indoor positioning with excellent stability and real-time performance of approximately 20ms per calculation.' : '主要成果包括创新性地将点云数据转换为图像处理问题，设计了针对结构化环境的特征提取方法，实现了毫米级精度的室内定位，具备良好的稳定性和实时性（单次计算约20ms）。' %>
+            </p>
+          </div>
+          <div class="overview-image">
+            <img src="/image/robot-results.jpg" alt="Project Results" class="project-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="project-section">
+      <div class="container">
+        <div class="back-link">
+          <a href="/projects" class="back-button">
+            ← <%= lang === 'en' ? 'Back to Projects' : '返回项目列表' %>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html> 

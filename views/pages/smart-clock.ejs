@@ -38,30 +38,72 @@
       <div class="container">
         <h2><%= lang === 'en' ? 'Project Demo Video' : '项目演示视频' %></h2>
         <div class="video-container">
-          <!-- Desktop Video Player -->
-          <div class="desktop-video">
-            <iframe 
-              src="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/preview" 
-              width="100%" 
-              height="500" 
-              allow="autoplay"
-              class="demo-video">
-            </iframe>
-          </div>
-          
-          <!-- Mobile Video Player -->
-          <div class="mobile-video">
-            <div class="mobile-video-placeholder">
-              <div class="video-icon">🎥</div>
-              <h3><%= lang === 'en' ? 'Project Demo Video' : '项目演示视频' %></h3>
-              <p><%= lang === 'en' ? 'Click to watch the complete project demonstration' : '点击观看完整项目演示' %></p>
-              <a href="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/view?usp=sharing" 
-                 target="_blank" 
-                 class="mobile-video-button">
-                <%= lang === 'en' ? 'Watch Video' : '观看视频' %>
-              </a>
+          <% if (lang === 'en') { %>
+            <!-- English Version - Google Drive -->
+            <div class="desktop-video">
+              <iframe 
+                src="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/preview" 
+                width="100%" 
+                height="500" 
+                allow="autoplay"
+                class="demo-video">
+              </iframe>
             </div>
-          </div>
+            
+            <div class="mobile-video">
+              <div class="mobile-video-placeholder">
+                <div class="video-icon">🎥</div>
+                <h3>Project Demo Video</h3>
+                <p>Click to watch the complete project demonstration</p>
+                <a href="https://drive.google.com/file/d/1GpJeau-O78zI6oE7ogSVTM1Llvrdl-aD/view?usp=sharing" 
+                   target="_blank" 
+                   class="mobile-video-button">
+                  Watch Video
+                </a>
+              </div>
+            </div>
+          <% } else { %>
+            <!-- Chinese Version - Multiple Options -->
+            
+            <!-- Bilibili Embed -->
+            <div class="desktop-video">
+              <iframe 
+                src="//player.bilibili.com/player.html?bvid=BV1CHggz5Ewh&page=1&high_quality=1&danmaku=0" 
+                width="100%" 
+                height="500" 
+                scrolling="no" 
+                border="0" 
+                frameborder="no" 
+                framespacing="0" 
+                allowfullscreen="true"
+                class="demo-video">
+              </iframe>
+            </div>
+            
+            <!-- Alternative: HTML5 Video Player (if you have local video file) -->
+            <!-- 
+            <div class="desktop-video">
+              <video width="100%" height="500" controls class="demo-video">
+                <source src="/videos/smart-clock-demo.mp4" type="video/mp4">
+                <source src="/videos/smart-clock-demo.webm" type="video/webm">
+                您的浏览器不支持视频播放。
+              </video>
+            </div>
+            -->
+            
+            <div class="mobile-video">
+              <div class="mobile-video-placeholder">
+                <div class="video-icon">🎥</div>
+                <h3>项目演示视频</h3>
+                <p>点击观看完整项目演示</p>
+                <a href="https://www.bilibili.com/video/BV1CHggz5Ewh" 
+                   target="_blank" 
+                   class="mobile-video-button">
+                  观看视频
+                </a>
+              </div>
+            </div>
+          <% } %>
           
           <p class="video-description">
             <%= lang === 'en' ? 'Complete functionality demonstration of the Smart World Clock project.' : '智能世界时钟项目的完整功能演示。' %>
@@ -87,7 +129,51 @@
             </p>
           </div>
           <div class="overview-image">
-            <img src="/image/smart-clock-main.jpg" alt="Smart World Clock" class="project-image">
+            <img src="/image/smartclockmain.png" alt="Smart World Clock" class="project-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Photos -->
+    <section class="project-section">
+      <div class="container">
+        <h2><%= lang === 'en' ? 'Project Photos' : '项目照片' %></h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="/image/pcba-top.png" alt="PCBA Top View" class="gallery-image">
+            <h3><%= lang === 'en' ? 'PCBA Top View' : 'PCBA 正面视图' %></h3>
+            <p><%= lang === 'en' ? 'Top view of the assembled printed circuit board showing component placement and routing' : '组装完成的印刷电路板正面视图，展示元件布局和布线' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/pcba-bottom.png" alt="PCBA Bottom View" class="gallery-image">
+            <h3><%= lang === 'en' ? 'PCBA Bottom View' : 'PCBA 背面视图' %></h3>
+            <p><%= lang === 'en' ? 'Bottom view of the PCB showing solder joints and ground plane design' : 'PCB背面视图，展示焊接点和接地层设计' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/pcba-running.png" alt="PCBA Running Under Load" class="gallery-image">
+            <h3><%= lang === 'en' ? 'PCBA Running Under Load' : 'PCBA 负载运行状态' %></h3>
+            <p><%= lang === 'en' ? 'System running with full functionality, displaying time and weather information' : '系统全功能运行状态，显示时间和天气信息' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/altium-2d.png" alt="Altium Board Design 2D View" class="gallery-image">
+            <h3><%= lang === 'en' ? 'Altium Board Design - 2D View' : 'Altium 电路板设计 - 2D视图' %></h3>
+            <p><%= lang === 'en' ? '2D layout view showing component placement and signal routing in Altium Designer' : 'Altium Designer中的2D布局视图，展示元件布局和信号布线' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/altium-3d.png" alt="Altium Board Design 3D View" class="gallery-image">
+            <h3><%= lang === 'en' ? 'Altium Board Design - 3D View' : 'Altium 电路板设计 - 3D视图' %></h3>
+            <p><%= lang === 'en' ? '3D rendering showing the physical layout and component heights for manufacturing' : '3D渲染图，展示物理布局和元件高度，用于制造' %></p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="/image/nodered-dashboard.png" alt="Node-RED Dashboard" class="gallery-image">
+            <h3><%= lang === 'en' ? 'Node-RED Dashboard' : 'Node-RED 仪表板' %></h3>
+            <p><%= lang === 'en' ? 'Web-based dashboard for remote configuration and monitoring of the smart clock' : '基于Web的仪表板，用于智能时钟的远程配置和监控' %></p>
           </div>
         </div>
       </div>
@@ -125,8 +211,8 @@
           </div>
           <div class="feature-card">
             <div class="feature-icon">⏱️</div>
-            <h3><%= lang === 'en' ? 'Countdown Timer' : '倒计时器' %></h3>
-            <p><%= lang === 'en' ? 'Set countdown timers with alarm sound at completion' : '设置倒计时器，完成时发出闹钟声' %></p>
+            <h3><%= lang === 'en' ? 'Countdown Timer' : '倒计时' %></h3>
+            <p><%= lang === 'en' ? 'Set countdown timers with alarm sound at completion' : '设置倒计时，完成时发出闹钟声' %></p>
           </div>
         </div>
       </div>
@@ -156,7 +242,7 @@
               <li><strong><%= lang === 'en' ? 'Dashboard:' : '仪表板:' %></strong> Node-RED</li>
               <li><strong><%= lang === 'en' ? 'APIs:' : '接口:' %></strong> Weather API, Time zone API</li>
               <li><strong><%= lang === 'en' ? 'Language:' : '编程语言:' %></strong> Embedded C</li>
-              <li><strong><%= lang === 'en' ? 'Design Tools:' : '设计工具:' %></strong> Altium Designer, SolidWorks</li>
+              <li><strong><%= lang === 'en' ? 'Design Tools:' : '设计工具:' %></strong> Altium Designer, Microchip Studio, SolidWorks</li>
             </ul>
           </div>
         </div>
@@ -169,7 +255,7 @@
         <h2><%= lang === 'en' ? 'System Architecture' : '系统架构' %></h2>
         <div class="architecture-content">
           <div class="architecture-image">
-            <img src="/image/system-block-diagram.png" alt="System Block Diagram" class="project-image">
+            <img src="/image/systemblockdiagram.png" alt="System Block Diagram" class="project-image">
           </div>
           <div class="architecture-description">
             <p>

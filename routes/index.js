@@ -39,6 +39,15 @@ router.get('/projects/smart-clock', (req, res) => {
   });
 });
 
+// Robot Positioning System project detail page route
+router.get('/projects/robot-positioning', (req, res) => {
+  res.render('pages/robot-positioning', { 
+    title: res.locals.lang === 'en' ? 'Robot Positioning System - Project Details' : '机器人定位系统 - 项目详情',
+    lang: res.locals.lang,
+    currentPath: res.locals.currentPath
+  });
+});
+
 // Contact page route
 router.get('/contact', (req, res) => {
   res.render('pages/contact', { 
