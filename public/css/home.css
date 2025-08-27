@@ -151,6 +151,88 @@
     z-index: 1;
   }
   
+  /* Personal Motto section styling */
+  #motto {
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+    backdrop-filter: blur(10px);
+  }
+  
+  .motto-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .motto-text-chinese {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 15px 0;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+    font-family: '纳米老宋', 'Noto Serif SC', 'SimSun', serif;
+    position: relative;
+    display: block;
+  }
+  
+  .motto-text-chinese::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(1px);
+    z-index: -1;
+  }
+  
+  .motto-text-english {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 8px 0;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    font-family: 'Times New Roman', 'Georgia', 'Palatino', 'Book Antiqua', serif;
+    position: relative;
+  }
+  
+  .motto-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--highlight-color));
+    border-radius: 2px;
+  }
+  
+  .motto-container::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--highlight-color), var(--accent-color));
+    border-radius: 2px;
+  }
+
   /* Education section styling */
   .education-container {
     display: flex;
@@ -289,6 +371,15 @@
     .section-title {
       font-size: 2rem;
     }
+    
+    /* Motto responsive for 900px */
+    .motto-text-chinese {
+      font-size: 2.2rem;
+    }
+    
+    .motto-text-english {
+      font-size: 1.2rem;
+    }
   }
   
   @media (max-width: 768px) {
@@ -338,6 +429,19 @@
       padding: 10px 20px;
       font-size: 0.9rem;
     }
+    
+    /* Motto responsive for 768px */
+    .motto-text-chinese {
+      font-size: 2rem;
+    }
+    
+    .motto-text-english {
+      font-size: 1.1rem;
+    }
+    
+    .motto-container {
+      padding: 30px 15px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -385,6 +489,21 @@
     .tech-item {
       padding: 8px 16px;
       font-size: 0.85rem;
+    }
+    
+    /* Motto responsive for 480px */
+    .motto-text-chinese {
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+    
+    .motto-text-english {
+      font-size: 1rem;
+      margin: 6px 0;
+    }
+    
+    .motto-container {
+      padding: 25px 10px;
     }
   }
   /* Additional CSS fixes to ensure content is visible without excessive top space */

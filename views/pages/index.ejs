@@ -37,6 +37,18 @@
       </div>
     </section>
     
+    <!-- Personal Motto Section -->
+    <section id="motto" class="section-container">
+      <div class="section-content">
+        <div class="motto-container">
+          <h2 class="motto-text-chinese">越过难以越过的</h2>
+          <h2 class="motto-text-chinese">成为你想成为的</h2>
+          <p class="motto-text-english">Overcome the insurmountable,</p>
+          <p class="motto-text-english">become who you aspire to be</p>
+        </div>
+      </div>
+    </section>
+    
     <!-- Education Section -->
     <section id="education" class="section-container">
       <div class="section-content">
@@ -104,8 +116,7 @@
           <h3 class="skill-category-title"><%= lang === 'en' ? 'Hardware Design' : '硬件设计' %></h3>
           <div class="tech-grid">         
             <div class="tech-item">Circuit Design</div>         
-            <div class="tech-item">PCB Design</div>         
-            <div class="tech-item">4-Layer PCB</div>         
+            <div class="tech-item">PCB Design</div>                  
             <div class="tech-item">Oscilloscope</div>         
             <div class="tech-item">Logic Analyzer</div>
             <div class="tech-item">Multimeter</div>
@@ -157,7 +168,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const navArrow = document.getElementById('nav-arrow');
       const arrowText = document.getElementById('arrow-text');
-      const sections = ['#about', '#education', '#tech-stack'];
+      const sections = ['#about', '#motto', '#education', '#tech-stack'];
       let currentSectionIndex = 0;
       
       // Show arrow initially
@@ -188,9 +199,15 @@
         if (newIndex < sections.length - 1) {
           arrowText.textContent = '↓';
           navArrow.setAttribute('href', sections[newIndex + 1]);
-          navArrow.setAttribute('aria-label', newIndex === 0 ? 
-            '<%= lang === "en" ? "Scroll to Education" : "滚动到教育背景" %>' : 
-            '<%= lang === "en" ? "Scroll to Tech Stack" : "滚动到技术栈" %>');
+          let ariaLabel;
+          if (newIndex === 0) {
+            ariaLabel = '<%= lang === "en" ? "Scroll to Motto" : "滚动到个人信条" %>';
+          } else if (newIndex === 1) {
+            ariaLabel = '<%= lang === "en" ? "Scroll to Education" : "滚动到教育背景" %>';
+          } else if (newIndex === 2) {
+            ariaLabel = '<%= lang === "en" ? "Scroll to Tech Stack" : "滚动到技术栈" %>';
+          }
+          navArrow.setAttribute('aria-label', ariaLabel);
         } else {
           arrowText.textContent = '↑';
           navArrow.setAttribute('href', '#top');
