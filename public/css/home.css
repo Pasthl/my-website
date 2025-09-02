@@ -569,7 +569,7 @@ body {
   }
   
   /* Fix for subsequent sections */
-  #education, #tech-stack {
+  #education, #tech-stack, #in-progress {
     padding-top: 30px; /* Less top padding for other sections too */
   }
   
@@ -577,4 +577,168 @@ body {
   footer {
     margin-top: 0;
     padding-top: 20px;
+  }
+
+  /* In Progress Section Styling */
+  #in-progress {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.02));
+    backdrop-filter: blur(5px);
+  }
+  
+  .progress-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .progress-intro {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  
+  .progress-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .progress-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-accent);
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+  
+  .progress-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-right: 25px;
+  }
+  
+  .progress-content {
+    flex: 1;
+  }
+  
+  .progress-content h3 {
+    color: var(--accent-color);
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .progress-content p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .progress-motto {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .progress-motto-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+  }
+  
+  /* Responsive design for In Progress section */
+  @media (max-width: 900px) {
+    .progress-item {
+      padding: 20px 25px;
+    }
+    
+    .progress-number {
+      font-size: 1.8rem;
+      min-width: 50px;
+      margin-right: 20px;
+    }
+    
+    .progress-content h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .progress-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .progress-number {
+      margin-right: 0;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .progress-intro {
+      font-size: 1.1rem;
+    }
+    
+    .progress-motto-text {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .progress-container {
+      padding: 0 10px;
+    }
+    
+    .progress-item {
+      padding: 15px;
+    }
+    
+    .progress-number {
+      font-size: 1.3rem;
+    }
+    
+    .progress-content h3 {
+      font-size: 1.1rem;
+    }
+    
+    .progress-content p {
+      font-size: 0.9rem;
+    }
+    
+    .progress-motto {
+      padding: 20px 15px;
+    }
+    
+    .progress-motto-text {
+      font-size: 1rem;
+    }
   }

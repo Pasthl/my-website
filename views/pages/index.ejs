@@ -102,7 +102,8 @@
             <div class="tech-item">FreeRTOS</div>         
             <div class="tech-item">UART/SPI/I2C</div>         
             <div class="tech-item">CAN/TCP/UDP</div>         
-            <div class="tech-item">MQTT</div>         
+            <div class="tech-item">MQTT</div> 
+            <div class="tech-item">WiFi/BLE/LoRa</div>        
             <div class="tech-item">GPIO/Interrupts</div>
             <div class="tech-item">Timer/PWM/ADC</div>
             <div class="tech-item">PID Control</div>
@@ -163,6 +164,42 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- In Progress Section -->
+    <section id="in-progress" class="section-container">
+      <div class="section-content">
+        <h2 class="section-title"><%= lang === 'en' ? 'In Progress' : '正在进行时' %></h2>
+        <div class="progress-container">
+          <p class="progress-intro"><%= lang === 'en' ? 'Currently Learning & Exploring:' : '最近正在学习的内容：' %></p>
+          <div class="progress-grid">
+            <div class="progress-item">
+              <div class="progress-number">01</div>
+              <div class="progress-content">
+                <h3>ESE 5180</h3>
+                <p><%= lang === 'en' ? 'IoT Wireless, Security, & Scaling' : 'IoT 无线通信、安全与扩展' %></p>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-number">02</div>
+              <div class="progress-content">
+                <h3>ESE 6450</h3>
+                <p><%= lang === 'en' ? 'Deep Generative Model' : '深度生成模型' %></p>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-number">03</div>
+              <div class="progress-content">
+                <h3>MIT 6.S081</h3>
+                <p><%= lang === 'en' ? 'Operating Systems' : '操作系统' %></p>
+              </div>
+            </div>
+          </div>
+          <div class="progress-motto">
+            <p class="progress-motto-text"><%= lang === 'en' ? 'Every day, I\'m becoming a better version of myself.' : '每一天都在成为更好的自己。' %></p>
+          </div>
+        </div>
+      </div>
     </section>   
   </main>      
   
@@ -178,7 +215,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const navArrow = document.getElementById('nav-arrow');
       const arrowText = document.getElementById('arrow-text');
-      const sections = ['#about', '#motto', '#education', '#tech-stack'];
+      const sections = ['#about', '#motto', '#education', '#tech-stack', '#in-progress'];
       let currentSectionIndex = 0;
       
       // Show arrow initially
@@ -216,6 +253,8 @@
             ariaLabel = '<%= lang === "en" ? "Scroll to Education" : "滚动到教育背景" %>';
           } else if (newIndex === 2) {
             ariaLabel = '<%= lang === "en" ? "Scroll to Tech Stack" : "滚动到技术栈" %>';
+          } else if (newIndex === 3) {
+            ariaLabel = '<%= lang === "en" ? "Scroll to In Progress" : "滚动到正在进行时" %>';
           }
           navArrow.setAttribute('aria-label', ariaLabel);
         } else {
